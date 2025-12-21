@@ -40,4 +40,5 @@ except ImportError:
     install_tf_cuda()
     restart_runtime()
 
+tf.config.optimizer.set_jit(True)
 print("DONE at : ", datetime.now().strftime("%A, %B %d, %Y %I:%M %p"))
