@@ -1,6 +1,7 @@
 import os
 import sys
 from datetime import datetime
+from packaging import version
 import pytz; ist_timezone = pytz.timezone('Asia/Kolkata')
 
 def install_tf_cuda():
@@ -18,7 +19,7 @@ try:
     import tensorflow as tf
     
     # 1. Check Version
-    if tf.__version__ != '2.12.0':
+    if version.parse(tf.__version__) < version.parse("2.12.0'):
         print(f"Found TensorFlow {tf.__version__}. Installing 2.12.0 [and-cuda]...")
         install_tf_cuda()
         print("Restarting runtime to load new binaries...")
