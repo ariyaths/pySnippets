@@ -1,7 +1,7 @@
 import os
 import sys
 from datetime import datetime
-from zoneinfo import ZoneInfo
+import pytz; ist_timezone = pytz.timezone('Asia/Kolkata')
 
 def install_tf_cuda():
     print('Installing TensorFlow 2.12.0 with CUDA libraries...')
@@ -42,4 +42,4 @@ except ImportError:
     restart_runtime()
 
 tf.config.optimizer.set_jit(True)
-print("DONE at : ", datetime.now(ZoneInfo('Asia/Kolkata')).strftime("%A, %B %d, %Y %I:%M %p"))
+print("DONE at : ", datetime.now(ist_timezone).strftime("%A, %B %d, %Y %I:%M %p"))
