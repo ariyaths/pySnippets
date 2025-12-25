@@ -43,4 +43,4 @@ except ImportError:
     restart_runtime()
 
 tf.config.optimizer.set_jit(True)
-print("DONE at : ", datetime.now(ist_timezone).strftime("%A, %B %d, %Y %I:%M %p"))
+print("Ran on", datetime.now(ist_timezone).strftime("%A, %B %d, %Y at %I:%M %p"))
