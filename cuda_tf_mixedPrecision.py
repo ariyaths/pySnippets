@@ -1,5 +1,6 @@
 import os
 import tensorflow as tf
+from keras import mixed_precision
 
 # 1. Clean up logs
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
