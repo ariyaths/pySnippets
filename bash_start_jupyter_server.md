@@ -4,5 +4,4 @@ jupyter notebook \
   --ServerApp.port_retries=0 \
   --no-browser \
   --MappingKernelManager.cull_idle_timeout=86400 \
-  --ServerApp.websocket_ping_interval=None \
-  --ServerApp.websocket_ping_timeout=None
+  --ServerApp.websocket_ping_interval=0
